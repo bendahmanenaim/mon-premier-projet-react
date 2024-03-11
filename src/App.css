@@ -36,3 +36,46 @@
     transform: rotate(360deg);
   }
 }
+/***********************/
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section,
+.right-section {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.app-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.left-link,
+.right-link {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.right-link {
+  margin-left: auto;
+}

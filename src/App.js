@@ -5,18 +5,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        Chez vous, partout et ailleurs
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <nav>
+          <ul className="left-section">
+            <li className="app-name">Kasa</li>
+           </ul>
+          <ul className="right-section">
+            <li className="left-link">Accueil</li>
+            <li className="right-link">À Propos</li>
+          </ul>
+        </nav>
       </header>
     </div>
   );
