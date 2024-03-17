@@ -1,22 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import Home from "./pages/Home";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-      <nav>
-          <ul className="left-section">
-            <li className="app-name">Kasa</li>
-           </ul>
-          <ul className="right-section">
-            <li className="left-link">Accueil</li>
-            <li className="right-link">À Propos</li>
-          </ul>
-        </nav>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
