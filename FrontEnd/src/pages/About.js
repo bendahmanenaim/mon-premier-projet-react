@@ -1,6 +1,8 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import Logo from "../components/Logo";
+import Banner from "../components/Banner";
+import Collapse from "../components/Collapse";
 
 
 const About = () => {
@@ -8,13 +10,9 @@ const About = () => {
     <div>
       <Logo/>
       <Navigation/>
-       <div>
-           <h2>Fiabilité</h2>
-               <p>
-                Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
-              </p>
-      </div>
-      <div>
+      <Banner/>
+      <Collapse/>
+             <div>
            <h2>Respect</h2>
               <p>
               La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.
