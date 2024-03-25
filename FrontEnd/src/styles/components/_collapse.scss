@@ -1,0 +1,154 @@
+.collapsible {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 1023px;
+     
+    &__header{
+        display: flex;
+        align-items: center;
+        background-color: #FF6060;
+        padding: 6px;
+        cursor: pointer;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 1023px;
+        height: 30px;
+        position: relative;
+
+        /*@media screen and (min-width: map-get($breakpoint, mobile-L)) {
+            height: 32px;
+        }*/
+
+       /* @media screen and (min-width: map-get($breakpoint, tablette)) {
+            height: 34px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            height: 37px;
+            border-radius: 7px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+            height: 47px;
+        }*/
+
+        h2{
+            color: white;
+            font-family: Montserrat;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+          /*  @include typographie-collapse-title;
+            margin-left: 11.51px;
+
+            @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+                margin-left: 18.08px
+            }*/
+        }
+
+        .fa-solid, .fas{
+            color: white;
+            position: absolute;
+            bottom: 5.77px;
+            right: 6.28px;
+
+          /*  @media screen and (min-width: map-get($breakpoint, tablette)) {
+                bottom: 7px;
+                right: 14px;
+                font-size: 17px;
+            }
+
+            @media screen and (min-width: map-get($breakpoint, laptop)) {
+                bottom: 7px;
+                right: 18px;
+                font-size: 20px;
+            }
+
+            @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+                bottom: 10px;
+                right: 15px;
+                font-size: 27px;
+            }*/
+          }
+    }
+
+   /* &__content {
+
+        &--about{
+            @include collapse__content;
+            padding: 17.31px 11.5px 53px 11.5px;
+
+            @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+                padding: 22px 27px 47px 18px;
+            }
+
+            @media screen and (min-width: map-get($breakpoint, tablette)) {
+                padding: 22px 27px 41px 18px;
+            }
+
+            @media screen and (min-width: map-get($breakpoint, laptop)) {
+                padding: 22px 27px 19px 18px;
+            }
+
+            @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+                padding: 27px 27px 19px 18px;
+            }
+        }
+
+        &--sheet{
+            @include collapse__content;
+            padding: 17.27px 11.5px 5px 11.5px;
+
+            @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+                padding: 22px 27px 47px 18px;
+            }
+            
+            @media screen and (min-width: map-get($breakpoint, tablette)) {
+                padding: 22px 27px 41px 18px;
+            }
+
+            @media screen and (min-width: map-get($breakpoint, laptop)) {
+                padding: 22px 27px 27px 20px;
+            }
+        }
+    }*/
+}
+
+/*.collapse__content--lodging{
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        gap: 76px;
+    } 
+
+    h2{
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            font-size: 18px;
+            line-height: 25.67px;
+            font-weight: 500;
+        }
+    }
+    p{
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            font-size: 18px;
+            line-height: 25.67px;
+            font-weight: 400;
+            padding: 22px 27px 47px 20px;
+        }
+    }
+
+    li{
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            font-size: 18px;
+            line-height: 25.67px;
+            font-weight: 400;
+        }
+    }
+}*/

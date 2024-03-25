@@ -3,10 +3,16 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="banner">
-      {/* Les images importées depuis la balise IMG sont accessibles dans "public" */}
-      <h1>Chez vous, partout et ailleurs</h1>
-    </div>
+    <>
+    <section className="banner">
+      <div className="banner__conteneur">
+        <h1>Chez vous, partout et ailleurs</h1>
+      </div>
+    </section>
+     <section className="layout">
+     <div className="layout__conteneur"></div>
+   </section>
+   </>
   );
 };
 

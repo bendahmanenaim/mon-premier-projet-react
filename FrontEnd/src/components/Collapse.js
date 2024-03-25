@@ -1,31 +1,55 @@
 import React, { useState } from 'react';
 
-const Collapse = () => {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+export default function Collapsible({ title, description, equipments }) {
+  const [isOpen, setIsOpen] = useState(false);
 
-  // Fonction pour basculer l'état du collapse
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
-  };
 
-  return (
-    <div className="Collapse_collapseContainer__XVQT-">
-      <div className="Collapse_title__ekDwp" onClick={toggleCollapse}>
-        <h1>Fiabilité</h1>
-        {/* Utilisation de l'icône fa-angle-down de Font Awesome */}
-        <i
-          className={`fa-light fa-angle-${isCollapsed ? 'down' : 'up'}`}
-          role="button"
-        />
-      </div>
-      {/* Condition pour afficher ou masquer le texte en fonction de l'état du collapse */}
-      {!isCollapsed && (
-        <div className="Collapse_text__2ULiJ">
-          Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.
+  // Récupération de l'url de la page 
+  const pathname = window.location.pathname;
+
+  let className = '';
+
+  //Si l'URL correspond à la page `À propos` le style correspondant lui est attribué. 
+  if (pathname === '/about-us') {
+    className = 'collapsible__content--about';
+  } else {
+    className = 'collapsible__content--sheet';
+  }
+
+  return isOpen ? (
+    <article className="collapsible">
+      <div className="collapsible__header" onClick={() => setIsOpen(false)}>
+        <h2>{title}</h2>
+        <div className="icon">
+          <i className={'fas fa-chevron-' + (isOpen ? 'up' : 'down')}></i>
         </div>
-      )}
-    </div>
-  );
-};
+      </div>
 
-export default Collapse;
+      {typeof description === 'string' ? (
+        // Si la description est un string, on affiche un paragraphe
+        <React.Fragment>
+          <p className={className}>{description}</p>
+        </React.Fragment>
+      ) : (
+        // Si la description n'est pas un string, on affiche une liste
+        <React.Fragment>
+          <ul className={className}>
+            {Array.isArray(equipments)&& equipments.map((equipment, index) => (
+              // `map()` : parcour chaque élément du tableau et retourne une nouvelle liste d'éléments, qui s'afficheront dans une liste.
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </React.Fragment>
+      )}
+    </article>
+  ) : (
+    <article className="collapsible">
+      <div className="collapsible__header" onClick={() => setIsOpen(true)}>
+        <h2>{title}</h2>
+        <div className="icon">
+          <i className={'fas fa-chevron-' + (isOpen ? 'up' : 'down')}></i>
+        </div>
+      </div>
+    </article>
+  );
+}
