@@ -21,7 +21,7 @@ export default function Collapsible({ title, description, equipments }) {
       <div className="collapsible__header" onClick={() => setIsOpen(false)}>
         <h2>{title}</h2>
         <div className="icon">
-          <i className={'fas fa-chevron-' + (isOpen ? 'up' : 'down')}></i>
+          <i className={'fas fa-chevron-' + (isOpen ? 'down Collapse_iconUp__NunNW' : 'up Collapse_iconDown__-VweP')}></i>
         </div>
       </div>
 
@@ -47,7 +47,7 @@ export default function Collapsible({ title, description, equipments }) {
       <div className="collapsible__header" onClick={() => setIsOpen(true)}>
         <h2>{title}</h2>
         <div className="icon">
-          <i className={'fas fa-chevron-' + (isOpen ? 'up' : 'down')}></i>
+          <i className={'fas fa-chevron-' + (isOpen ? 'up Collapse_iconUp' : 'down Collapse_iconDown')}></i>
         </div>
       </div>
     </article>

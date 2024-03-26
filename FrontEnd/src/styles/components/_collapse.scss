@@ -38,7 +38,7 @@
 
         h2{
             color: white;
-            font-family: Montserrat;
+            font-family: 'Montserrat', sans-serif, arial;
             font-size: 24px;
             font-style: normal;
             font-weight: 500;
@@ -55,6 +55,7 @@
             position: absolute;
             bottom: 5.77px;
             right: 6.28px;
+
 
           /*  @media screen and (min-width: map-get($breakpoint, tablette)) {
                 bottom: 7px;
@@ -74,6 +75,24 @@
                 font-size: 27px;
             }*/
           }
+    }
+    .Collapse_iconUp__NunNW {
+        transform: rotate(-180deg);
+        transition: all .5s;
+    }
+    
+    .Collapse_iconDown__-VweP {
+        transform: rotate(0deg);
+        transition: all .5s;
+    }
+    .Collapse_iconUp {
+        transform: rotate(-180deg);
+        transition: all .5s;
+    }
+    
+    .Collapse_iconDown {
+        transform: rotate(0deg);
+        transition: all .5s;
     }
 
    /* &__content {
