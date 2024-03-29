@@ -10,7 +10,7 @@
     &__header{
         display: flex;
         align-items: center;
-        background-color: #FF6060;
+        background-color: $salmon-color;
         padding: 6px;
         cursor: pointer;
         border-radius: 5px;
@@ -19,11 +19,11 @@
         height: 30px;
         position: relative;
 
-        /*@media screen and (min-width: map-get($breakpoint, mobile-L)) {
+        @media screen and (min-width: map-get($breakpoint, mobile-L)) {
             height: 32px;
-        }*/
+        }
 
-       /* @media screen and (min-width: map-get($breakpoint, tablette)) {
+        @media screen and (min-width: map-get($breakpoint, tablette)) {
             height: 34px;
         }
 
@@ -34,20 +34,20 @@
 
         @media screen and (min-width: map-get($breakpoint, laptop-L)) {
             height: 47px;
-        }*/
+        }
 
         h2{
-            color: white;
+            /*color: white;
             font-family: 'Montserrat', sans-serif, arial;
             font-size: 24px;
             font-style: normal;
-            font-weight: 500;
-          /*  @include typographie-collapse-title;
+            font-weight: 500;*/
+          @include typographie-collapse-title;
             margin-left: 11.51px;
 
             @media screen and (min-width: map-get($breakpoint, laptop-L)) {
                 margin-left: 18.08px
-            }*/
+            }
         }
 
         .fa-solid, .fas{
@@ -57,7 +57,7 @@
             right: 6.28px;
 
 
-          /*  @media screen and (min-width: map-get($breakpoint, tablette)) {
+           @media screen and (min-width: map-get($breakpoint, tablette)) {
                 bottom: 7px;
                 right: 14px;
                 font-size: 17px;
@@ -73,7 +73,7 @@
                 bottom: 10px;
                 right: 15px;
                 font-size: 27px;
-            }*/
+            }
           }
     }
     .Collapse_iconUp__NunNW {
@@ -95,7 +95,7 @@
         transition: all .5s;
     }
 
-   /* &__content {
+   &__content {
 
         &--about{
             @include collapse__content;
@@ -134,10 +134,10 @@
                 padding: 22px 27px 27px 20px;
             }
         }
-    }*/
+    }
 }
 
-/*.collapse__content--lodging{
+.collapse__content--lodging{
 
     @media screen and (min-width: map-get($breakpoint, laptop)) {
         display: flex;
@@ -170,4 +170,4 @@
             font-weight: 400;
         }
     }
-}*/
+}

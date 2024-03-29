@@ -1,5 +1,101 @@
 
-  .banner {
+.banner {
+
+  margin: 16px 0px 22px 0px;
+
+  @media screen and (min-width: map-get($breakpoint, laptop)){
+      margin: 40px 0px 43px 0px;
+  }
+
+  &__conteneur{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 111px;
+      border-radius: 10px;
+      background-image: url("../../assets/img/banner_img.png");
+      background-position: center;
+      background-size: cover;
+      position: relative;
+
+      @media screen and (max-width: map-get($breakpoint, laptop)) {
+         padding-right: 100px;
+      }
+
+      @media screen and (min-width: map-get($breakpoint, laptop)){
+          justify-content: center;
+          height: 143px;
+      }
+
+      @media screen and (min-width: map-get($breakpoint, laptop-L)){
+          height: 223px;
+      }
+
+      &::after{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $black-color;
+          opacity: 0.3;
+          mix-blend-mode: darken;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+      }
+      
+  }
+
+  h1{
+      z-index: 2;
+      @include typographie-banner-component;
+      text-align: left;
+  }
+}
+
+.layout {
+
+  margin: 17px 0px 19px 0px;
+
+  @media screen and (min-width: map-get($breakpoint, laptop)){
+      margin-top: 44px;
+  }
+
+  &__conteneur{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      height: 223px;
+      border-radius: 10px;
+      background-image: url("../../assets/img/banner_img2.png");
+      background-position: center;
+      background-size: cover;
+      position: relative;
+
+      @media screen and (max-width: map-get($breakpoint, laptop)) {
+          padding-right: 100px;
+      }
+
+      &::after{
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $black-color;
+          opacity: 0.3;
+          mix-blend-mode: darken;
+          z-index: 1;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+      }
+      
+  }
+}
+/*.banner {
     @include verticalCenter;
     margin-top: 50px;
     margin-bottom: 40px;
@@ -15,7 +111,7 @@
     background-color: white;
     
 
-    background: url(../../assets/img/banner_img.svg) center/cover;
+    background: url(../../assets/img/banner_img.png) center/cover;
 
   
     img {
@@ -29,4 +125,4 @@
       font-size: 40px;
       color: white;
     }
-  }
+  }*/

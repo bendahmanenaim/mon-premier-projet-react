@@ -30,3 +30,395 @@ body {
 li {
   list-style-type: none;
 }
+   
+/**********_keyframes*********/
+@keyframes CollapseAnimation {
+  0% {
+  opacity: 0;
+  transform: translateY(-20px);
+  }
+  100% {
+  opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+@keyframes loader {
+  0%   {background-position:-150% 0,-150% 0}
+  66%  {background-position: 250% 0,-150% 0}
+  100% {background-position: 250% 0, 250% 0}
+}
+
+@keyframes fadeOut {
+   100% {
+       opacity: 0;
+       visibility: hidden;
+   }
+
+   75% {
+       opacity: 1;
+   }
+}
+/*********end keyframes***************/
+
+/***************mixins***************/
+@mixin typographie-header-component {
+  font: {
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size1);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 17.22px;
+  text-align: right;
+  color: $black-color;
+
+  @media screen and (max-width: 375px) {
+      text-transform: uppercase;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: map-get($font-size, size2);
+      line-height: 28px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+      font-size: map-get($font-size, size3);
+      line-height: 34px;
+  }
+}
+
+@mixin typographie-footer-component {
+  font: {
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size1);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 17.22px;
+  text-align: right;
+  color: $white-color;
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: 24px;
+      line-height: 34.22px;
+  }
+}
+
+@mixin typographie-banner-component {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size3);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 24px;
+  color: $white-color;
+  margin-left: 16px;
+
+  @media screen and (min-width: map-get($breakpoint, laptop)){
+      font-size: map-get($font-size, size4);
+      line-height: 68px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)){
+      font-size: map-get($font-size, size5);
+      line-height: 68px;
+  }
+}
+
+@mixin typographie-404-component {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size6);
+      weight: map-get($montserrat, bold);
+  };
+  
+  line-height: 137px;
+  color: $salmon-color;
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoint, tablette)) {
+      font-size: 180px;
+      line-height: 300px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: 268px;
+      line-height: 380px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+      font-size: 288px;
+      line-height: 411px;
+  }
+}
+
+@mixin typographie-error-component {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size2);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 26px;
+  color: $salmon-color;
+  text-align: center;
+
+  @media screen and (min-width: map-get($breakpoint, tablette)) {
+      font-size: 30px;
+      line-height: 53px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: 34px;
+      line-height: 33px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+      font-size: 36px;
+      line-height: 51px;
+  }
+}
+
+@mixin typographie-errorLink-component {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size1);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 20px;
+  color: $salmon-color;
+  text-align: center;
+  text-decoration: underline;
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: 18px;
+      line-height: 26px;
+  }
+}
+
+@mixin typographie-thumbnail {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size2);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 26px;
+  color: $white-color;
+  text-align: start;
+}
+
+@mixin typographie-collapse-title {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size0);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 19px;
+  color: $white-color;
+  text-align: start;
+
+  @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+      font-size: 14px;
+      line-height: 20px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, tablette)) {
+      font-size: 15px;
+      line-height: 20px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: 20px;
+      line-height: 25px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+      font-size: 24px;
+      line-height: 34.22px;
+  }
+}
+
+@mixin typographie-collapse-description {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size);
+      weight: map-get($montserrat, regular);
+  };
+  
+  line-height: 17px;
+  color: $salmon-color;
+  text-align: start;
+
+  @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+      font-size: 14px;
+      line-height: 20px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, tablette)) {
+      font-size: 15px;
+      line-height: 20px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: 20px;
+      line-height: 25px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+      font-size: 24px;
+      line-height: 34.22px;
+  }
+}
+
+@mixin underline-animation {
+  border-bottom: 1px solid red;
+}
+
+@mixin layout-section {
+  background: #000000;
+  mix-blend-mode: darken;
+  opacity: 0.3;
+}
+
+@mixin collapse__content{
+  background: linear-gradient(179deg, rgba(255,255,255,1) 0%, rgba(247,247,247,1) 30%);
+  @include typographie-collapse-description;
+  border-radius: 5px 5px 5px 5px;
+  width: 100%;
+  opacity: 0;
+  animation: CollapseAnimation 1s cubic-bezier(0.4, 0, 0.2, 1) forwards ;
+  z-index: -1;
+  
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      padding-bottom: 10px;
+  }
+}
+
+@mixin typographie-sheet-title {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size2);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 26px;
+  color: $salmon-color;
+  text-align: start;
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: map-get($font-size, size3);
+      line-height: 36px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+      font-size: map-get($font-size, size4);
+      line-height: 51px;
+  }
+}
+
+@mixin typographie-sheet-location {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size1);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 20px;
+  color: $salmon-color;
+  text-align: start;
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: map-get($font-size, size2);
+      line-height: 20px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+      font-size: map-get($font-size, size2);
+      line-height: 26px;
+  }
+}
+@mixin typographie-host-name {
+  font: {
+      style: normal;
+      family: 'Montserrat', sans-serif, arial;
+      size: map-get($font-size, size1);
+      weight: map-get($montserrat, medium);
+  };
+  
+  line-height: 17px;
+  color: $salmon-color;
+  text-align: right;
+
+  @media screen and (min-width: map-get($breakpoint, laptop)) {
+      font-size: map-get($font-size, size2);
+      line-height: 17px;
+  }
+
+  @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+      font-size: map-get($font-size, size2);
+      line-height: 26px;
+  }
+}
+
+
+/******************end mixins**************/
+/*****************_variables**************/
+/**
+    color pallet
+**/
+
+$salmon-color: #FF6060; // Text and background
+$white-color: #FFFFFF; // Section text
+$black-color: #000000; // Footer background
+
+$grey-background-color: #F7F7F7; // Dropdown background color & background location
+$grey-rate-color: #E3E3E3; // Stars background color
+$grey-personas-color: #C4C4C4; // Personas background color
+
+/**
+    sass:map
+**/
+
+$breakpoint: (
+   mobile-S: 350px,
+   mobile-M: 375px,
+   mobile-L: 425px,
+   tablette: 768px,
+   laptop: 1024px,
+   laptop-L: 1440px,
+   desktop-XL: 2000px,
+);
+
+$font-size: (
+    size: 12px,
+    size0: 13px,
+    size1: 14px,
+    size2: 18px,
+    size3: 24px,
+    size4: 36px,
+    size5: 48px,
+    size6: 96px,
+);
+
+// Font-weight :
+
+$montserrat: (
+    regular: 400,
+    medium: 500,
+    bold: 700,
+);
+    

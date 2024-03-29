@@ -1,18 +1,23 @@
 .logo {
-  @include verticalCenter;
-  margin-left: 10px;
-  width: 200px;
-  border-radius: 20px;
-  padding: 5px 0;
-  //box-shadow: 0 2px 3px rgba(0, 0, 0, 0.307);
-  //background: url(../../assets/img/main.jpg) center/cover;
 
   img {
+    width: 145px;
+    height: 47px;
+
+    @media screen and (max-width: map-get($breakpoint, mobile-S)){
+        display: none;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop)){
+        width: 197px;
+        height: 63.69px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)){
+        width: 210.32px;
+        height: 68px;
+    }
+   
+  }
   
-    height: 40px;
-  }
-  h3 {
-    margin-left: 10px;
-    color: $color-1;
-  }
 }
