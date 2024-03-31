@@ -1,25 +1,32 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import {Link} from "react-router-dom";
+
 
 const Offres = () => {
+  const [data, setData] = useState([]);
+
   
-const [data,setData] = useState([]);
   // Le useEffect se joue lorsque le composant est monté
   useEffect(() => {
     axios.get("http://localhost:8080/api/properties")
-      .then((res) => console.log(res.data));
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
 
   return (
     <div className="offres">
-      <h1>Offres</h1>
-      <ul>
-        {data.map((id)=>
-        (<li key={id.title}>{id.title.cover }
-          </li>)
-        )}
-      </ul>
+    
+       {/* Afficher les données récupérées ici */}
+       {data.map((offre) => (
+        <div key={offre.id}>
+          <p>{offre.title}</p>
+          <img src={offre.cover} alt="Cover" />
+        </div>
+      ))}
     </div>
     
   );

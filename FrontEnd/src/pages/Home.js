@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 import Offres from "../components/Offres";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
+import Thumb from "../components/Thumb";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Navigation />
       <Banner/>
       <Offres/>
+      <Thumb/>
       <Footer/>
       
     </div>
