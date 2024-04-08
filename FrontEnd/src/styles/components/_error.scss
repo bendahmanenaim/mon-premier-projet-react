@@ -1,0 +1,25 @@
+.error{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    h2{
+        margin: 195px 0px 11px 0px;
+        @include typographie-404-component;
+    }
+
+    p{
+        margin: 0px 30px 133px 30px;
+        @include typographie-error-component;
+
+        @media screen and (min-width: map-get($breakpoint, tablette)) {
+            margin: 0px 100px 133px 100px;
+        }
+    }
+
+    a{
+        margin-bottom: 205px;
+        @include typographie-errorLink-component
+    
+    }
+}

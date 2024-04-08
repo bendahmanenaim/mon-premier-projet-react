@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { fetchProperties } from "../components/api";
 import Navigation from "../components/Navigation";
 //import Logo from "../components/Logo";
 import Banner from "../components/Banner";
@@ -13,13 +13,16 @@ const Home = () => {
   
   // Le useEffect se joue lorsque le composant est monté
   useEffect(() => {
-    axios.get("http://localhost:8080/api/properties")
-      .then((res) => {
-        setData(res.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+    const fetchData = async () => {
+      try {
+        const propertiesData = await fetchProperties();
+        setData(propertiesData);
+      } catch (error) {
+        // Gérer les erreurs
+      }
+    };
+
+    fetchData();
   }, []);
   return (
     <div>
@@ -33,6 +36,7 @@ const Home = () => {
      key={offre.id}
      cover={offre.cover}
      title={offre.title}
+     link={offre.id}
      />
    ))}
  </section>
