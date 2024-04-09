@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 const Fiche_logement = () => {
   const { id } = useParams();
   const [foundOffre, setOffre] = useState(null);
+  const [loading, setLoading] = useState(true); // Ajouter un état de chargement
 
   useEffect(() => {
     const fetchoffre = async () => {
@@ -27,17 +28,31 @@ const Fiche_logement = () => {
       } catch (error) {
         console.error('Error fetching offre:', error);
         // Gérer les erreurs de chargement des données ici
+      }   finally {
+        setLoading(false); // Mettre à jour l'état de chargement une fois terminé
       }
     };
 
     fetchoffre(); // Appel de la fonction fetchoffre lorsque le composant est monté
   }, [id]); // Déclenche fetchoffre lorsque l'ID change dans les paramètres de l'URL
+// Vérifier si on est en train de charger les données
+if (loading) {
+    return <p>Chargement en cours...</p>; // Peut être remplacé par un composant de chargement
+  }
 
-   return foundOffre ? (
-    // Si l'offre est trouvée, afficher la fiche
+  // Si une offre est trouvée, afficher les détails
+  return (
     <React.Fragment>
       <Navigation />
       <main>
+        <section className="offre-details">
+          <div className="offre-image">
+            <img src={foundOffre.cover} alt={foundOffre.title} />
+          </div>
+          <div className="offre-title">
+            <h1>{foundOffre.title}</h1>
+          </div>
+        </section>
         <section className="collapse__content--lodging">
           <Collapse
             title="Description"
@@ -50,12 +65,9 @@ const Fiche_logement = () => {
             equipments={foundOffre.equipments}
           />
         </section>
-        <Footer/>
+        <Footer />
       </main>
     </React.Fragment>
-  ) : (
-    // JSX pour la redirection vers la page d'erreur
-    <Navigate replace to="/erreur" />
   );
 };
 
