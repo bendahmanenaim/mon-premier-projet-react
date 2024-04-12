@@ -1,0 +1,145 @@
+.slideshow{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.slideshow__content{
+    position: relative;
+    margin-top: 27px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+img.chevron {
+    &--gauche{
+        position: absolute;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        top: 116px;
+        left: 0;
+        margin: 0px 5.84px;
+    }
+
+    &--droit{
+        position: absolute;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        top: 116px;
+        right: 0;
+        margin: 0px 5.84px;
+    }
+
+    &--droit,
+    &--gauche {
+
+
+        @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+            width: 13.85px;
+            height: 39.3px;
+            top: 113px;
+            margin: 0px 15px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, tablette)) {
+            width: 20.85px;
+            height: 39.3px;
+            top: 135px;
+            margin: 0px 15px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop)) {
+            width: 65px;
+            height: 59.3px;
+            top: 138px;
+            margin: 0px 15px;
+        }
+
+        @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+            width: 80px;
+            height: 50%;
+            top: 165px;
+            margin: 0px 23.36px;
+        }
+    }
+}
+    
+.slideshow__img{
+    object-fit: cover;
+    width: 100%;
+    max-width: 1600px;
+    height: 255px;
+    border-radius: 10px;
+
+    @media screen and (min-width: map-get($breakpoint, mobile-L)) {
+       height: 275px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, tablette)) {
+        height: 315px;
+     }
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        height: 335px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        height: 415px;
+    }
+}
+
+.slidecount{
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    gap: 10px;
+    background-color: #f7f7f7a8;
+    padding: 4px 15px;
+    border-radius: 10px;
+
+    @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+        padding: 3px 10px;
+        gap: 5px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, tablette)) {
+        bottom: 7px;
+    }
+
+    &--numbers {
+        position: absolute;
+        bottom: 25px;
+        font: {
+            family: 'Montserrat', sans-serif, arial;
+            size: map-get($font-size, size2);
+            weight: map-get($montserrat, medium);
+        };
+        
+        line-height: 25.67px;
+        text-align: center;
+        color: $white-color;
+    }
+}
+
+i.fa-regular.fa-circle {
+    font-size: 10px;
+    color: #00000075;
+
+    @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+        font-size: 7px;
+    }
+}
+
+i.fa-solid.fa-circle {
+    font-size: 10px;
+    color: #ff6060c4;
+
+    @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+        font-size: 7px;
+    }
+}

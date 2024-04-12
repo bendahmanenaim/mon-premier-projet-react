@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { fetchProperties } from "../components/api";
 import Collapse from '../components/Collapse';
+import Slideshow from '../components/Slideshow';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
@@ -45,12 +46,30 @@ if (loading) {
     <React.Fragment>
       <Navigation />
       <main>
-        <section className="offre-details">
-          <div className="offre-image">
-            <img src={foundOffre.cover} alt={foundOffre.title} />
+      <section className="slideshow">
+          <Slideshow pictures={foundOffre.pictures} alt={foundOffre.title} />
+        </section>
+        <section className="sheet">
+          <div className="sheet--left">
+            <h1 className="sheet__title">{foundOffre.title}</h1>
+            <h2 className="sheet__location">{foundOffre.location}</h2>
+            <ul className="sheet__tags">
+              {foundOffre.tags.map((tag, index) => (
+                <li className="sheet__tags--tag" key={index}>
+                  {tag}
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="offre-title">
-            <h1>{foundOffre.title}</h1>
+          <div className="sheet--right">
+            <div className="personnas">
+              <p>{foundOffre.host.name}</p>
+              <img
+                src={foundOffre.host.picture}
+                alt={`Photo de profil de : ` + foundOffre.host.name}
+              />
+            </div>
+          
           </div>
         </section>
         <section className="collapse__content--lodging">

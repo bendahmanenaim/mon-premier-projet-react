@@ -1,0 +1,121 @@
+.sheet{
+    
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 24px 0 24px 0;
+    }
+
+&__title{
+    @include typographie-sheet-title;
+    margin: 15px 0 5px 0;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        margin-top: 0;
+    }
+}
+
+&__location{
+    @include typographie-sheet-location;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        margin-bottom: 20px;
+    }
+}
+
+&__tags{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    height: auto;
+
+    &--tag{
+    width: auto;
+    height: 18px;
+    background-color: $salmon-color;
+    border-radius: 5px;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: center;
+    color: $white-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 27px 2px 27px;
+    margin: 0px 10px 10px 0px;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        font-size: 12px;
+        line-height: 18px;
+        padding: 10px 27px 10px 27px;
+        border-radius: 7px;
+        margin: 0px 8px 0 0px;
+        }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        font-size: 14px;
+        line-height: 20px;
+        padding: 12px 29px 12px 29px;
+        border-radius: 9px;
+        margin: 0px 10px 0 0px;
+        }
+    }
+}
+
+&--right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0px 16px 0px;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 0;
+    }
+}
+}
+
+.personnas{
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin: 0px 0px 0px 16.5px;
+
+@media screen and (min-width: map-get($breakpoint, laptop)) {
+    margin-bottom: 18px;
+}
+
+@media screen and (min-width: map-get($breakpoint, laptop-L)) {
+    margin-bottom: 21px;
+}
+
+img{
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+
+    @media screen and (min-width: map-get($breakpoint, laptop)) {
+        width: 32*1.5px;
+        height: 32*1.5px;
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop-L)) {
+        width: 32*2px;
+        height: 32*2px;
+    }
+}
+
+p{
+    height: auto;
+    width: 43px;
+    @include typographie-host-name;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end
+}
+}
