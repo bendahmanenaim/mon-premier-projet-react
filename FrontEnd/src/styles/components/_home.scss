@@ -28,11 +28,13 @@
 
     @media screen and (min-width: map-get($breakpoint, laptop)) {
         gap: 20px 0px;
+        max-width: 1440px;
         padding: 50px 40px 50px 40px;
     }
 
     @media screen and (min-width: map-get($breakpoint, laptop-L)) {
         gap: 50px;
+        max-width: 1600px;
         padding: 56px 50px 56px 50px;
     }
 }

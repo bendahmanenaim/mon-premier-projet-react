@@ -25,7 +25,7 @@
 
       @media screen and (min-width: map-get($breakpoint, laptop)){
           justify-content: center;
-          height: 143px;
+          height: 223px;
       }
 
       @media screen and (min-width: map-get($breakpoint, laptop-L)){
@@ -95,34 +95,5 @@
       
   }
 }
-/*.banner {
-    @include verticalCenter;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    width: 100%;
-    height: 190px;
-    border-radius: 25px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
+
     
-
-    background: url(../../assets/img/banner_img.png) center/cover;
-
-  
-    img {
-        border-radius: 25px;
-        opacity: .7;
-       
-        
-    }
-  
-    h1 {
-      font-size: 40px;
-      color: white;
-    }
-  }*/

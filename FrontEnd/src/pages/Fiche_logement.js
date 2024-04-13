@@ -3,6 +3,7 @@ import { useParams, Navigate } from "react-router-dom";
 import { fetchProperties } from "../components/api";
 import Collapse from '../components/Collapse';
 import Slideshow from '../components/Slideshow';
+import Rating from '../components/Rating';
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
@@ -69,7 +70,7 @@ if (loading) {
                 alt={`Photo de profil de : ` + foundOffre.host.name}
               />
             </div>
-          
+            <Rating rating={foundOffre.rating} />
           </div>
         </section>
         <section className="collapse__content--lodging">
