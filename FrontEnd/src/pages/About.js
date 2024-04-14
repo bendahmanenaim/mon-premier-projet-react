@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import AboutUs from '../data/about-us.json';
-import Footer from '../components/Footer';
+
 
 
 export default function About() {
@@ -14,6 +14,7 @@ export default function About() {
   return (
     
     <React.Fragment>
+      <div className='container'>
      <Navigation/>
    
       <main>
@@ -28,7 +29,7 @@ export default function About() {
           ))}
         </section>
       </main>
-      <Footer/>
+     </div>
     </React.Fragment>
     
   );

@@ -3,7 +3,6 @@ import { fetchProperties } from "../components/api";
 import Navigation from "../components/Navigation";
 //import Logo from "../components/Logo";
 import Banner from "../components/Banner";
-import Footer from "../components/Footer";
 import Thumb from "../components/Thumb";
 
 
@@ -25,7 +24,7 @@ const Home = () => {
     fetchData();
   }, []);
   return (
-    <div>
+    <div className="container">
       <Navigation />
       <Banner/>
       <section className="Thumb">
@@ -40,7 +39,7 @@ const Home = () => {
      />
    ))}
  </section>
-      <Footer/>
+      
     </div>
   );
 };

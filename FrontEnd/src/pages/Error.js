@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
 
 export default function Error() {
   const width = window.innerWidth;
@@ -12,7 +12,7 @@ export default function Error() {
 
   return (
     <React.Fragment>
-    
+      <div className='container'> 
       <Navigation />
       <main className="error">
         <h2>404</h2>
@@ -24,7 +24,7 @@ export default function Error() {
           Retourner sur la page d'accueil
         </Link>
       </main>
-      <Footer/>
+     </div>
     </React.Fragment>
   );
 }

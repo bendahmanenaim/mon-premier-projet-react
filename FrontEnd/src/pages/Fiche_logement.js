@@ -5,7 +5,7 @@ import Collapse from '../components/Collapse';
 import Slideshow from '../components/Slideshow';
 import Rating from '../components/Rating';
 import Navigation from "../components/Navigation";
-import Footer from "../components/Footer";
+
 
 const Fiche_logement = () => {
   const { id } = useParams();
@@ -45,6 +45,7 @@ if (loading) {
   // Si une offre est trouvée, afficher les détails
   return (
     <React.Fragment>
+      <div className="container">
       <Navigation />
       <main>
       <section className="slideshow">
@@ -85,8 +86,9 @@ if (loading) {
             equipments={foundOffre.equipments}
           />
         </section>
-        <Footer />
+       
       </main>
+      </div>
     </React.Fragment>
   );
 };
