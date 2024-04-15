@@ -19,6 +19,28 @@
   @media screen and (min-width: map-get($breakpoint, laptop)){
      margin-top: 40px;
     }
+
+    &__img {
+      width: 145px;
+      height: 47px;
+  
+      @media screen and (max-width: map-get($breakpoint, mobile-S)){
+         width: 145px;
+          height: 47px;
+      }
+  
+      @media screen and (min-width: map-get($breakpoint, laptop)){
+          width: 197px;
+          height: 63.69px;
+      }
+  
+      @media screen and (min-width: map-get($breakpoint, laptop-L)){
+          width: 210.32px;
+          height: 68px;
+      }
+     
+    }
+    
     &__nav{
       display: flex;
       align-items: center;

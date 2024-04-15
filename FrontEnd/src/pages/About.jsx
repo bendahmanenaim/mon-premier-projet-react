@@ -7,24 +7,29 @@ import AboutUs from '../data/about-us.json';
 
 
 export default function About() {
+  // Utilisation de useEffect pour mettre à jour le titre de la page
   useEffect(() => {
-    document.title = `À propos - Kasa`;
+    document.title = `À propos - Kasa`; // Définition du titre de la page
   });
 
   return (
     
     <React.Fragment>
       <div className='container'>
+          {/* Affichage de la navigation */}
      <Navigation/>
    
       <main>
+           {/* Affichage de la bannière */}
         <Banner />
+         {/* Section des collapsibles */}
         <section className="collapse">
+           {/* Mapping à travers les données sur about pour afficher chaque Collapse */}
           {AboutUs.map((about, index) => (
             <Collapse
-              key={about.title + index}
-              title={about.title}
-              description={about.description}
+              key={about.title + index} // Clé unique pour chaque Collapse
+              title={about.title}     // Titre du Collapse
+              description={about.description} // Description du Collapse
             />
           ))}
         </section>

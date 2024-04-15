@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import Logo from "../components/Logo";
+import Logo from '../assets/img/logokasa.png';
 import { useEffect, useState } from 'react';
 
 const Navigation = () => {
@@ -14,7 +14,9 @@ const Navigation = () => {
   }, [location]);
   return (
     <div className="navigation">
-       <Logo/>
+       <NavLink to="/">
+        <img className="navigation__img" src={Logo} alt="Logo Kasa" />
+      </NavLink>
       <nav className="navigation__nav">
       <ul className="navigation__nav--list">
       <NavLink to="/" className={isActiveHome ? "navigation__nav--home--underline" : "navigation__nav--home"}>

@@ -40,14 +40,14 @@ img.chevron {
 
 
         @media screen and (min-width: map-get($breakpoint, mobile-L)) {
-            width: 13.85px;
+            width: 24px;
             height: 39.3px;
             top: 113px;
             margin: 0px 15px;
         }
 
         @media screen and (min-width: map-get($breakpoint, tablette)) {
-            width: 20.85px;
+            width: 50px;
             height: 39.3px;
             top: 135px;
             margin: 0px 15px;
