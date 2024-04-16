@@ -120,13 +120,16 @@ p{
 }
 }
 .container{
-    padding: 20px;
+    padding: 20px; 
+     
 @media screen and (max-width: 375px) {
-    padding: 15px;
+    padding: 10px;
 }
-@media screen and (min-width: 1024px) {
-    padding: 35px;
+@media screen and (max-width: 1025px) {
+    padding: 25px;
+ 
 }
+
 @media screen and (min-width: 1440px) {
     padding: 50px;
 }

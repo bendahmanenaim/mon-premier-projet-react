@@ -1,0 +1,29 @@
+.navigation,
+main {
+    margin: 0px 20px 0px 20px;
+    max-width: 1440px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+        margin:0;
+     }
+
+    @media screen and (min-width: map-get($breakpoint, tablette)){
+     
+    }
+
+    @media screen and (min-width: map-get($breakpoint, laptop)){
+      
+    }
+  }
+
+
+  body {
+    //max-width: 1440px;
+    text-align: -webkit-center;
+    margin: auto;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    
+  }
+  

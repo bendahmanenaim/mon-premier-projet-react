@@ -52,6 +52,9 @@
       z-index: 2;
       @include typographie-banner-component;
       text-align: left;
+      @media screen and (max-width: map-get($breakpoint, mobile-L)) {
+        margin-left: 25px;
+     }
   }
 }
 

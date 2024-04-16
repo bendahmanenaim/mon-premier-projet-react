@@ -24,9 +24,9 @@
       width: 145px;
       height: 47px;
   
-      @media screen and (max-width: map-get($breakpoint, mobile-S)){
-         width: 145px;
-          height: 47px;
+      @media screen and (max-width: map-get($breakpoint, mobile-L)){
+         width: 125px;
+          height: 30px;
       }
   
       @media screen and (min-width: map-get($breakpoint, laptop)){
