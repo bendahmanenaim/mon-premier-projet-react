@@ -5,6 +5,8 @@ import Collapse from '../components/Collapse';
 import Slideshow from '../components/Slideshow';
 import Rating from '../components/Rating';
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+
 
 
 const Fiche_logement = () => {
@@ -41,10 +43,15 @@ const Fiche_logement = () => {
 if (loading) {
     return <p>Chargement en cours...</p>; // Peut être remplacé par un composant de chargement
   }
+    // Si aucune offre n'est trouvée pour l'ID spécifié, afficher la page d'erreur
+    if (!foundOffre) {
+      return <Navigate replace to="/*" />; // Redirection vers la page d'erreur
+    }
 
   // Si une offre est trouvée, afficher les détails
   return (
     <React.Fragment>
+      <div className="mainContainer">
       <div className="container">
       <Navigation />
       <main>
@@ -88,6 +95,9 @@ if (loading) {
         </section>
        
       </main>
+
+      </div>
+      <Footer/>
       </div>
     </React.Fragment>
   );

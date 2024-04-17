@@ -4,7 +4,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Fiche_logement from "./pages/Fiche_logement";
 import Error from './pages/Error';
-import Footer from "./components/Footer";
+/*import Footer from "./components/Footer";*/
 
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
         {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
         <Route path="/*" element={<Error />} />
       </Routes>
-      <Footer/>
+     
     </Router>
   );
 };

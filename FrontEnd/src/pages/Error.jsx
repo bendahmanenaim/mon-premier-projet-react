@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 
 export default function Error() {
@@ -14,6 +15,7 @@ export default function Error() {
   return (
     <React.Fragment>
        {/* Affichage de la navigation */}
+       <div className='mainContainer'>
       <div className='container'> 
       <Navigation />
         {/* Contenu principal de la page d'erreur */}
@@ -29,6 +31,8 @@ export default function Error() {
           Retourner sur la page d'accueil
         </Link>
       </main>
+      </div>
+      <Footer/>
      </div>
     </React.Fragment>
   );

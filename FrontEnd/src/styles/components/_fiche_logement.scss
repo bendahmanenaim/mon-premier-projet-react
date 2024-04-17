@@ -121,6 +121,8 @@ p{
 }
 .container{
     padding: 20px; 
+    width: 100%;
+    flex-grow: 1;
      
 @media screen and (max-width: 375px) {
     padding: 10px;
@@ -134,3 +136,9 @@ p{
     padding: 50px;
 }
 }
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  

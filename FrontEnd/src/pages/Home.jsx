@@ -4,6 +4,7 @@ import Navigation from "../components/Navigation";
 //import Logo from "../components/Logo";
 import Banner from "../components/Banner";
 import Thumb from "../components/Thumb";
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -28,6 +29,7 @@ const Home = () => {
     fetchData();  // Appel de la fonction fetchData au montage initial du composant
   }, []); // Le tableau vide [] en tant que dépendance signifie que cela ne s'exécutera qu'une seule fois au montage initial
   return (
+    <div className="mainContainer">
     <div className="container">
       <Navigation />
       <Banner/>
@@ -43,9 +45,11 @@ const Home = () => {
      link={offre.id}// Propriété 'id' de l'offre pour le lien
      />
    ))}
- </section>
+    </section>
       
     </div>
+    <Footer/>
+    </div> 
   );
 };
 
