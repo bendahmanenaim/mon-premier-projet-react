@@ -61,7 +61,7 @@ export default function Slideshow({ pictures, alt }) {
       <img
         className="slideshow__img"
         src={pictures[index]}
-        alt={`Photo du logement : ${alt}`}
+        alt={alt}
       />
 
       {pictures.length > 1 && <SlideCount indexPicture={index} />}

@@ -2,8 +2,8 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 const Banner = () => {
-  const location = useLocation();
-  const pathname = window.location.pathname;
+  
+  const pathname = useLocation().pathname;
 
   return (
     <section className={pathname === "/" ? "banner" : "layout"}>
